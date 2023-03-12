@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 2555720407277388565}
   - component: {fileID: -4374729625374740466}
   - component: {fileID: 975629682}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy01
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  atkDistance: 1.5
+  atkDistance: 1.2
 --- !u!1 &9005500802363532167
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 3432651583682486107}
   - component: {fileID: 1757281996589028794}
   - component: {fileID: 7973337925867298641}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Weapon
   m_TagString: EnemyWeapon
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &7973337925867298641
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
+  m_Name: stick_man_SkeletonData
+  m_EditorClassIdentifier: 
+  atlasAssets:
+  - {fileID: 11400000, guid: d6dd14a0969169846a07c2b2b1fc4dff, type: 2}
+  scale: 0.004
+  skeletonJSON: {fileID: 4900000, guid: 8a91ae36f2652a24981e3a1c5b0a54a7, type: 3}
+  isUpgradingBlendModeMaterials: 0
+  blendModeMaterials:
+    requiresBlendModeMaterials: 1
+    applyAdditiveMaterial: 1
+    additiveMaterials:
+    - pageName: stick_man.png
+      material: {fileID: 2100000, guid: f8233d595d23c6e4aae6c26deb0b40af, type: 2}
+    multiplyMaterials: []
+    screenMaterials:
+    - pageName: stick_man.png
+      material: {fileID: 2100000, guid: d6daa6ca58a5885499ea018912d4a8bf, type: 2}
+  skeletonDataModifiers: []
+  fromAnimation: []
+  toAnimation: []
+  duration: []
+  defaultMix: 0.1
+  controller: {fileID: 9100000, guid: 3d63a62746d8e5348a9d0dbf20199da4, type: 2}

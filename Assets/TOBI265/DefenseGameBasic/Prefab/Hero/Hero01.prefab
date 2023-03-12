@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 3057021499466423684}
   - component: {fileID: 5806110342903602635}
   - component: {fileID: 547245540}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hero01
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -180,7 +180,8 @@ GameObject:
   - component: {fileID: 7383548527293512483}
   - component: {fileID: 4834119033508515031}
   - component: {fileID: 5261375717364722294}
-  m_Layer: 0
+  - component: {fileID: 754113666}
+  m_Layer: 6
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,3 +240,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.32
+--- !u!114 &754113666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8648773368572357639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e23f26f5c638f54d88fb6a7cee2fb07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
