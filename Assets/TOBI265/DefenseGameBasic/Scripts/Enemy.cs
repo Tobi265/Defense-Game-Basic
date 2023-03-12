@@ -34,7 +34,9 @@ namespace TOBI265.DefenseBasic
         {
             if (IsComponentNull()) return;
 
-            if (Vector2.Distance(m_Player.transform.position, transform.position) <= atkDistance)
+            float distToPlayer = Vector2.Distance(m_Player.transform.position, transform.position);
+
+            if (distToPlayer <= atkDistance)
             {
                 m_anim.SetBool(Const.ATTACK_ANIM, true);
                 m_Rb.velocity = Vector2.zero; // (0, 0)
@@ -43,6 +45,13 @@ namespace TOBI265.DefenseBasic
             {
                 m_Rb.velocity = new Vector2(-speed, m_Rb.velocity.y);
             }
+        }
+        public void Die() 
+        {
+            if (IsComponentNull()) return;
+            m_anim.SetTrigger(Const.DEAD_ANIM);
+            m_Rb.velocity = Vector2.zero;
+            gameObject.layer = LayerMask.NameToLayer(Const.DEAD_ANIM);
         }
     }
 }
