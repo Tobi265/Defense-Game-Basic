@@ -4,12 +4,13 @@ using UnityEngine;
 
 namespace TOBI265.DefenseBasic 
 {
-    public class Player : MonoBehaviour
+    public class Player : MonoBehaviour, IComponentChecking
     {
         public float atkRate;
         private Animator m_anim;
         private float m_curAtkRate;
         private bool m_isAttacked;
+        private bool m_isDead;
 
         private void Awake()
         {
@@ -23,12 +24,19 @@ namespace TOBI265.DefenseBasic
 
         }
 
+        public bool IsComponentNull() 
+        {
+            return m_anim == null;
+        }
+
         // Update is called once per frame
         void Update()
         {
+            if(IsComponentNull()) return;
+
             if (Input.GetMouseButtonDown(0) && !m_isAttacked)
             {
-                if (m_anim)
+          
                     m_anim.SetBool(Const.ATTACK_ANIM, true);
                 m_isAttacked = true;
             }
@@ -47,8 +55,19 @@ namespace TOBI265.DefenseBasic
         }
         public void ResetAtkAnim()
         {
-            if (m_anim)
-                m_anim.SetBool(Const.ATTACK_ANIM, false);
+            if (IsComponentNull()) return;
+            m_anim.SetBool(Const.ATTACK_ANIM, false);
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (IsComponentNull()) return;
+
+            if (collision.CompareTag(Const.ENEMY_WEAPON_TAG) && !m_isDead) 
+            {
+                m_anim.SetTrigger(Const.DEAD_ANIM);
+                m_isDead = true;
+            }
         }
     }
 }
